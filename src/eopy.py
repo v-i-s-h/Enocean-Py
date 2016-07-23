@@ -35,7 +35,7 @@ def main():
     print "\t\t*************************************************"
     print "\t\t**    Enocean Py - Monitor Enocean devices     **"
     print "\t\t*************************************************"
-    ttyPort = "/dev/ttyACM0"
+    ttyPort = "/dev/ttyS0"
     print "\tUsing serial port : " + ttyPort + '\n'
     
     # CO_RD_VERSION command
