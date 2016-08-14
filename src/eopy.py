@@ -102,9 +102,13 @@ def main():
                 print ''
                 pkts = ESP.decodeRawResponse( rawResp )
                 for pkt in pkts:
-                    print "[PACKET]................................................................."
+                    print "    :> ",
+                    for i in range(len(pkt['data_recv'])):
+                        print "%02X" %(pkt['data_recv'][i]),
+                    print ''
+                #     print "[PACKET]................................................................."
                     ESP.displayPacketInfo( pkt )
-                print "........................................................................."
+                # print "........................................................................."
     except KeyboardInterrupt:
         print "\nExiting Enocean Py Demo"
         EO.disconnect( hEOGateway )
